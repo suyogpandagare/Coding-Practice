@@ -12,6 +12,8 @@ public class IntersectionOfTwoArrays {
 		
 		printIntersection(arr1, arr2);
 		
+		printUnion(arr1, arr2);
+		
 	}
 	//the best catch here is set interface as it doesn't allow duplicates
 	static void printIntersection(int arr1[],int arr2[]) {
@@ -27,5 +29,21 @@ public class IntersectionOfTwoArrays {
 				System.out.print(arr2[i] + " ");
 		}
 	}
+	
+	//Union of two arrays
+		static void printUnion(int arr1[],int arr2[]) {
+		
+			Set<Integer> set = new HashSet<>();
+			
+			for (int i = 0; i < arr1.length; i++) {
+				set.add(arr1[i]);
+			}
+			
+			for (int i = 0; i < arr2.length; i++) {
+				set.add(arr2[i]);
+			}
+			
+			System.out.println("Union of two arrays = "+set);
+		}
 
 }
